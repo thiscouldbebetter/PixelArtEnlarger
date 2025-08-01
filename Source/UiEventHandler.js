@@ -99,4 +99,12 @@ class UiEventHandler
 		divImageEnlarged.appendChild(imageEnlargedAsCanvas);
  	}
 
+	inputMagnificationFactor_Changed(inputMagnificationFactor)
+	{
+		var d = document;
+		var inputFileToLoad =
+			d.getElementById("inputFileToLoad");
+		this.inputFileToLoad_Changed(inputFileToLoad);
+	}
+
 }

@@ -3,7 +3,10 @@
 
 <h3>Pixel Art Enlarger</h3>
 
-<p>Load an image and specify a magnification to see an enlarged version.</p>
+<p>
+	Load an image and specify a magnification to see an enlarged version.
+	A demo image is provided <a href="../Samples/Joust-Player.png">here</a>.
+</p>
 
 <div id="divMain">
 
@@ -13,6 +16,7 @@
 		<div>
 			<label>Load:</label>
 			<input
+				id="inputFileToLoad"
 				type="file"
 				onchange="UiEventHandler.Instance().inputFileToLoad_Changed(this);"
 			></input>
@@ -26,6 +30,7 @@
 				type="number"
 				style="width:64px"
 				value="16"
+				onchange="UiEventHandler.Instance().inputMagnificationFactor_Changed(this)"
 			></input>
 		</div>
 
@@ -33,6 +38,7 @@
 
 	<div>
 		<label>Enlarged Image:</label>
+		<br />
 		<div id="divImageEnlarged">[none]</div>
 	</div>
 </div>
